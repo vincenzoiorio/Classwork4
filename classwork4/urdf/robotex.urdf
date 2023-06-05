@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!--Name of the robot: robotex-->
+<robot name="robotex">
+    <link name="base_link">
+    <visual>
+            <geometry>
+                <cylinder length="0.5" radius="0.2"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="celeste">
+                <color rgba="0 1 1 1"/>
+            </material>
+        </visual>
+    </link>
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="0 0 0.1"/>
+        <axis xyz="0 0 1" />
+        <limit effort="300" velocity="0.1" lower="-3.14" upper="3.14"/>
+    </joint>
+<link name="link1">
+        <visual>
+            <geometry>
+                <cylinder length="0.5" radius="0.2"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.1"/>
+            <material name="blue">
+                <color rgba="0 0 1 1"/>
+            </material>
+        </visual>
+    </link>
+    <joint name="joint2" type="revolute">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="0 0 0.1"/>
+        <axis xyz="0 0 1" />
+        <limit effort="300" velocity="0.1" lower="-3.14" upper="3.14"/>
+    </joint>
+<link name="link2">
+        <visual>
+            <geometry>
+                <cylinder length="0.5" radius="0.2"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.1"/>
+            <material name="ab">
+                <color rgba="0 0.5 1 1"/>
+            </material>
+        </visual>
+    </link>
+    <joint name="joint3" type="revolute">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <origin xyz="0 0 0.1"/>
+        <axis xyz="0 0 1" />
+        <limit effort="300" velocity="0.1" lower="-3.14" upper="3.14"/>
+    </joint>
+<link name="link3">
+        <visual>
+            <geometry>
+                <cylinder length="0.5" radius="0.2"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.1"/>
+            <material name="cd">
+                <color rgba="0.5 0.5 1 1"/>
+            </material>
+        </visual>
+    </link>
+<joint name="joint4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <origin xyz="0 0 0.1"/>
+        <axis xyz="0 0 1" />
+        <limit effort="300" velocity="0.1" lower="-3.14" upper="3.14"/>
+    </joint>
+<link name="link4">
+        <visual>
+            <geometry>
+                <cylinder length="0.5" radius="0.2"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.1"/>
+            <material name="ef">
+                <color rgba="1 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+</robot>
+
+
+
