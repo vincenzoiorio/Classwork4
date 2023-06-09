@@ -152,12 +152,12 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-add_executable( servizio src/serviceone.cpp)
-target_link_libraries( servizio  ${catkin_LIBRARIES} )
+add_executable( clientbroadcaster src/clibroad.cpp)
+target_link_libraries( clientbroadcaster  ${catkin_LIBRARIES} )
 
 
-add_executable( transfo src/transform.cpp)
-target_link_libraries( transfo  ${catkin_LIBRARIES} )
+add_executable( serverlistener src/servelist.cpp)
+target_link_libraries( serverlistener  ${catkin_LIBRARIES} )
 
 #############
 ## Install ##
